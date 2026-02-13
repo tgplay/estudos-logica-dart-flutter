@@ -6,7 +6,7 @@ if(chute == numeroSecreto) {
     console.log('Parabéns! Você acertou o número secreto! (5)'); 
 }*/
 
-alert('Boas vindas ao nosso site!');
+/*alert('Boas vindas ao nosso site!');
 let nome = 'Lua';
 let idade = 25;
 let numeroDeVendas = 50;
@@ -22,7 +22,46 @@ if(age >= 18){
     alert('Bem-vindo, ' + nome + '! Você tem ' + age + ' anos e pode tirar habilitação para dirigir.');
 } else {
     alert('Desculpe, ' + nome + '. Você tem ' + age + ' anos e não pode tirar habilitação para dirigir ainda. Aguarde até completar 18 anos.');
+}*/
+
+
+/*let porcentagemDesconto = 0;
+let quantidadeMilhas = prompt('Digite a quantidade de milhas acumuladas: ');
+
+// Para utilizar o desconto referente a 5.000 milhas o operador lógico deve ser "maior ou igual" (>=) ou "maior que" (>).
+// Aqui foi utilizado "maior que" (>). Portando, o usuário que tiver exatamente 5.000 milhas não receberá o desconto de 10%.
+if(quantidadeMilhas > 5000){
+    porcentagemDesconto = porcentagemDesconto + 10;
+    alert(`Parabéns! Você tem direito a um desconto de ${porcentagemDesconto}% em sua próxima viagem!`);
 }
+
+// Uma quantidade milhas >= 30.000 satisfaria as duas condições, resultando em um desconto de 30%. Maior do que o devido.
+// O correto seria utilizar "else if" para garantir que apenas uma das condições seja satisfeita.
+// ntão é lógico que o usuário que tiver 30.000 milhas ou mais receberá apenas o desconto de 20%, e não os descontos de 10% e 20% somados, totalizando 30%.
+// O erro nesse modelo de negócio se da por conta da falta de uma estrutura de controle mais adequada, como o "else if", para garantir que apenas uma das condições seja satisfeita.
+if(quantidadeMilhas >= 30000){
+    porcentagemDesconto = porcentagemDesconto + 20;
+    alert(`Incrível! Você tem direito a um desconto de ${porcentagemDesconto}% em sua próxima viagem!`);
+} else {
+    alert(`Infelizmente,\n\nvocê não tem direito a descontos no momento.\n\nContinue acumulando milhas para aproveitar benefícios exclusivos!`);
+    porcentagemDesconto = 0;
+}*/
+
+
+let porcentagemDesconto = 0;
+let quantidadeMilhas = prompt('Digite a quantidade de milhas acumuladas: ');
+
+if(quantidadeMilhas >= 30000){
+    porcentagemDesconto = 20;
+    alert(`Incrível! Você tem direito a um desconto de ${porcentagemDesconto}% em sua próxima viagem!`);
+} else if(quantidadeMilhas >= 5000){
+    porcentagemDesconto = 10;
+    alert(`Parabéns! Você tem direito a um desconto de ${porcentagemDesconto}% em sua próxima viagem!`);
+} else {    
+    alert(`Infelizmente,\n\nvocê não tem direito a descontos no momento.\n\nContinue acumulando milhas para aproveitar benefícios exclusivos!`);    
+}
+
+
 
 
 // FLASHCARD 1
