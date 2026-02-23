@@ -1,10 +1,36 @@
-/*alert('Boas vindas ao jogo do número secreto!');
+alert('Boas vindas ao jogo do número secreto!');
 let numeroSecreto = 5;
-let chute = prompt('Escolha um número entre 1 e 10.');
+console.log('O número secreto é: ' + numeroSecreto); // Apenas para teste, remova ou comente esta linha para jogar de verdade.
 
-if(chute == numeroSecreto) { 
-    console.log('Parabéns! Você acertou o número secreto! (5)'); 
+let chute = prompt('Escolha um número entre 1 e 5.');
+let tentativas = 1;
+
+/*if(chute == numeroSecreto) { 
+    alert('Parabéns! Você acertou o número secreto!');
+} else {
+    if(chute > numeroSecreto) {
+        alert(`O número secreto é menor do que ${chute}. Tente novamente!`);
+    } else {
+        alert(`O número secreto é maior do que ${chute}. Tente novamente!`);
+    }
 }*/
+
+// Enquanto o chute não for igual ao número secreto
+while(chute != numeroSecreto){
+    chute = prompt('Tente novamente! Escolha um número entre 1 e 5.');
+    if(chute == numeroSecreto) {
+        alert(`Parabéns! Você descobriu o ${numeroSecreto} com ${tentativas} tentativas!`);
+    } else {
+        if(chute > numeroSecreto) {
+            alert(`O número secreto é menor do que ${chute}. Tente novamente!`);
+        } else {
+            alert(`O número secreto é maior do que ${chute}. Tente novamente!`);
+        }
+
+        tentativas++;
+    }
+
+}
 
 /*alert('Boas vindas ao nosso site!');
 let nome = 'Lua';
@@ -48,7 +74,7 @@ if(quantidadeMilhas >= 30000){
 }*/
 
 
-let porcentagemDesconto = 0;
+/*let porcentagemDesconto = 0;
 let quantidadeMilhas = prompt('Digite a quantidade de milhas acumuladas: ');
 
 if(quantidadeMilhas >= 30000){
@@ -59,7 +85,7 @@ if(quantidadeMilhas >= 30000){
     alert(`Parabéns! Você tem direito a um desconto de ${porcentagemDesconto}% em sua próxima viagem!`);
 } else {    
     alert(`Infelizmente,\n\nvocê não tem direito a descontos no momento.\n\nContinue acumulando milhas para aproveitar benefícios exclusivos!`);    
-}
+}*/
 
 
 
